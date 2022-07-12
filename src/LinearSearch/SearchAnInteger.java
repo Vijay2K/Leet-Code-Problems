@@ -1,3 +1,5 @@
+//Searching an element (integer) in an array using a linear search algorithm
+
 package LinearSearch;
 
 import java.util.Arrays;
