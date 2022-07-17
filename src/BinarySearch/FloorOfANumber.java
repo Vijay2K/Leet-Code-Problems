@@ -1,4 +1,5 @@
-//Floor of a number is "greater element which is the less than or equal to the target"
+//Find a floor number in an array
+//Floor of a number is "greater element which is the less than or equal to the target" in an array
 
 package BinarySearch;
 
@@ -8,12 +9,15 @@ public class FloorOfANumber {
             2, 3, 5, 9, 14, 16, 18
         };
 
-        System.out.println("Floor of a number : " + floorOfANumber(arr, 4));
+        System.out.println("Floor of a number : " + floor(arr, 4));
     }
 
-    private static int floorOfANumber(int[] arr, int target) {
+    private static int floor(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
+
+        if(target > arr[end])
+            return -1;
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
